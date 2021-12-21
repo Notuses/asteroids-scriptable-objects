@@ -1,3 +1,4 @@
+using Assignment;
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
 using Variables;
@@ -10,7 +11,7 @@ namespace Ship
         [SerializeField] private ScriptableEventIntReference _onHealthChangedEvent;
         [SerializeField] private IntReference _healthRef;
         [SerializeField] private IntObservable _healthObservable;
-        
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (string.Equals(other.gameObject.tag, "Asteroid"))
